@@ -1,0 +1,30 @@
+backend:
+  name: github
+  repo: jonglass1/living-the-letters
+  branch: main
+
+media_folder: "static/img"
+public_folder: "/img/"
+
+collections:
+  - name: "chapters"
+    label: "Chapters"
+    folder: "chapters"   # folder in your repo where chapter files live
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    fields:
+      - { name: "title", label: "Chapter Title", widget: "string" }
+      - { name: "body", label: "Content", widget: "markdown" }
+      - label: "Videos"
+        name: "videos"
+        widget: "list"
+        fields:
+          - { name: "url", label: "Video URL", widget: "string" }
+      - label: "Links"
+        name: "links"
+        widget: "list"
+        fields:
+          - { name: "label", label: "Link Text", widget: "string" }
+          - { name: "url", label: "URL", widget: "string" }
+      - { name: "pdf_url", label: "PDF Link", widget: "string" }
