@@ -7,9 +7,9 @@ media_folder: "static/img"
 public_folder: "/img/"
 
 collections:
-  - name: "chapters"
+  - name: "Chapters"
     label: "Chapters"
-    folder: "chapters"   # folder in your repo where chapter files live
+    folder: "docs/chapters"   # folder in your repo where chapter files live
     create: true
     slug: "{{slug}}"
     extension: "md"
